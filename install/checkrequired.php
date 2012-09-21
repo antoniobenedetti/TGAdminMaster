@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>GamePanelX Pro | Install</title>
+<title>TGAdmin | Install</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="scripts/jquery.js"></script>
 </head>
@@ -63,7 +63,7 @@
   
   
   <tr>
-    <td valign="top" width="160" style="padding-left:5px" class="description">PHP Version 5 or newer:&nbsp;</td>
+    <td valign="top" width="160" style="padding-left:5px" class="description">PHP Version 5.2 or newer:&nbsp;</td>
     <td>
         <?php
         //
@@ -74,10 +74,10 @@
         
         // PHP Version
         $php_version  = phpversion();
-        if($php_version < 5)
+        if($php_version < 5.2)
         {
             $failed=1;
-            echo '<span style="font-weight:bold;color:red">Error:</span> Your PHP installation (version <b>' . $php_version . '</b>) is too old.  You must run at least <b>PHP 5</b> or newer.';
+            echo '<span style="font-weight:bold;color:red">Error:</span> Your PHP installation (version <b>' . $php_version . '</b>) is too old.  You must run at least <b>PHP 5.2</b> or newer.';
         }
         else
         {
