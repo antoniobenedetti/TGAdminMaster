@@ -22,11 +22,11 @@
   <tr align="center" height="43" style="vertical-align:middle" valign="middle">
       <td style="vertical-align:middle" valign="middle" colspan="6" height="43" align="center" background="templates/{$template}/img/nav/bg.png" bgcolor="#053a68">
           <ul id="jsddm" style="vertical-align:middle" width="200">
-              <li><a href="main.php" style="text-align:center;width:120px"><img src="templates/{$template}/img/nav/transparent/main.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.nav_main}</span></a></li>
-	      <li><a href="servers.php?type=game" style="text-align:center;width:120px"><img src="templates/{$template}/img/nav/transparent/games.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_game_servers}</span></a></li>
-	      <li><a href="servers.php?type=voip" style="text-align:center;width:120px"><img src="templates/{$template}/img/nav/transparent/voip.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_voice_servers}</span></a></li>
-              <li><a href="tickets.php" style="text-align:center;width:120px"><img src="templates/{$template}/img/nav/transparent/support.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_tickets}</span></a></li>
-	      <li><a href="editsettings.php" style="text-align:center;width:120px"><img src="templates/{$template}/img/nav/transparent/settings.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_settings}</span></a></li>
+              <li><a href="main.php" style="text-align:center;width:140px"><img src="templates/{$template}/img/nav/transparent/main.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.nav_main}</span></a></li>
+	      <li><a href="servers.php?type=game" style="text-align:center;width:140px"><img src="templates/{$template}/img/nav/transparent/games.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_game_servers}</span></a></li>
+	      <li><a href="servers.php?type=voip" style="text-align:center;width:140px"><img src="templates/{$template}/img/nav/transparent/voip.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_voice_servers}</span></a></li>
+              <li><a href="tickets.php" style="text-align:center;width:140px"><img src="templates/{$template}/img/nav/transparent/support.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_tickets}</span></a></li>
+	      <li><a href="editsettings.php" style="text-align:center;width:140px"><img src="templates/{$template}/img/nav/transparent/settings.png" border="0" style="vertical-align:middle"><span class="nav_titles">&nbsp;&nbsp;{$lang.main_settings}</span></a></li>
           </ul>
       </td>
   </tr>
