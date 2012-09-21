@@ -10,7 +10,7 @@
         // Load info tab
         {/literal}
         {section name=db loop=$server_details}
-        loadServerTab('tab_serverinfo',{$server_details[db].id});
+        loadServerTab('tab_serverinfo_admin',{$server_details[db].id});
         {literal}
         // Change clicked tabs color
         $('.tabs').click(function(){
@@ -28,15 +28,15 @@
         
     <div align="center">
         <div id="tabs_full">
-            <div class="tabs" id="tab_info" style="background:#E0E0E0;" onClick="javascript:loadServerTab('tab_serverinfo',{$server_details[db].id});">Info</div>
+            <div class="tabs" id="tab_info" style="background:#E0E0E0;" onClick="javascript:loadServerTab('tab_serverinfo_admin',{$server_details[db].id});">Info</div>
                 <div class="tabspc"></div>
-            <div class="tabs" id="tab_status" onClick="javascript:loadServerTab('tab_serverstatus',{$server_details[db].id});">Status</div>
+            <div class="tabs" id="tab_status" onClick="javascript:loadServerTab('tab_serverstatus_admin',{$server_details[db].id});">Status</div>
                 <div class="tabspc"></div>
-            <div class="tabs" id="tab_editsrv" onClick="javascript:loadServerTab('tab_serveredit',{$server_details[db].id});">Edit Server</div>
+            <div class="tabs" id="tab_editsrv" onClick="javascript:loadServerTab('tab_serveredit_admin',{$server_details[db].id});">Edit Server</div>
                 <div class="tabspc"></div>
-            <div class="tabs" id="tab_files" onClick="javascript:loadServerTab('tab_serverfiles',{$server_details[db].id});">Files</div>
+            <div class="tabs" id="tab_files" onClick="javascript:loadServerTab('tab_serverfiles_admin',{$server_details[db].id});">Files</div>
                 <div class="tabspc"></div>
-            <div class="tabs" id="tab_startup" onClick="javascript:loadServerTab('tab_serverstartup',{$server_details[db].id});">Startup</div>
+            <div class="tabs" id="tab_startup" onClick="javascript:loadServerTab('tab_serverstartup_admin',{$server_details[db].id});">Startup</div>
         </div>
     </div>
     
