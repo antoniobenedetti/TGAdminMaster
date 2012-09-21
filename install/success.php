@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>GamePanelX Pro | Install</title>
+<title>TGAdmin | Install</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="scripts/jquery.js"></script>
 </head>
