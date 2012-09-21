@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>GamePanelX Pro | Install</title>
+<title>TGAdmin | Install</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="scripts/jquery.js"></script>
 </head>
@@ -185,7 +185,7 @@ $(document).ready(function() {
   </tr>
   
   <tr>
-    <td align="center" height="20" valign="middle" class="footer_text" colspan="6">&copy; GamePanelX Pro 2010-2011</td>
+    <td align="center" height="20" valign="middle" class="footer_text" colspan="6">&copy; TGAdmin Project 2010-2011</td>
   </tr>
   
 </table>
