@@ -1,0 +1,14 @@
+﻿===== TGAdmin-1.0.15Master  =====
+20.09.2012
+- Rebranding the control panel under the name "TGAdmin Project".
+- Updated Smarty to version Smarty 3.1.11 stable (PHP 5.2+).
+- Fixed SmartyException Fatal Error at client area.
+- CSS input field changes and tweaks.
+- Added Minecraft RCON support (by tylersuggs).
+- Added meta tag for redirection at logout template.
+- Added admin-side navigation to client area.
+- Added Macedonian language translation.
+
+===== GamePanelX-1.0.14Master  =====
+20.09.2012
+- Forked from GitHub: https://github.com/devryan/GamePanelX
