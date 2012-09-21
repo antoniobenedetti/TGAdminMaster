@@ -34,7 +34,7 @@ if(isset($config['sql_host']) && isset($config['sql_user']))
 {
     if(!empty($config['sql_user']))
     {
-        echo '<div align="center">You seem to have a GamePanelX installation already.<br /><br /><a href="update.php">Click Here to update</a>.</div>';
+        echo '<div align="center">You seem to have a TGAdmin installation already.<br /><br /><a href="update.php">Click Here to update</a>.</div>';
         exit;
     }
 }
@@ -257,7 +257,7 @@ elseif(isset($_POST['step2']) && !isset($_POST['step1']) && !isset($_POST['check
     // Create admin user
     //
     $admin_status = 'active';
-    $admin_notes  = 'Created by the GamePanelX Pro installer';
+    $admin_notes  = 'Created by the TGAdmin installer';
     
     @mysql_query("INSERT INTO admins (date_added,status,notes,username,password,email_address,language) VALUES(NOW(),'$admin_status','$admin_notes','$post_admin_user',MD5('$post_admin_pass'),'$post_admin_email','$post_language')") or die('Failed to add to the admins table');
     
@@ -283,7 +283,7 @@ elseif(isset($_POST['step2']) && !isset($_POST['step1']) && !isset($_POST['check
     // Insert main configuration
     //
     $query_insert_config  = "INSERT INTO `configuration` (`setting`, `value`) VALUES
-('CompanyName', 'GamePanelX'),
+('CompanyName', 'TGAdmin'),
 ('Template', 'default'),
 ('Language', '$post_language'),
 ('PrimaryEmail', '$post_admin_email'),
