@@ -1,6 +1,7 @@
 ﻿===== TGAdmin-1.0.15Master  =====
 21.09.2012
 - Admin side separation of game/voice server tabs.
+- Added Counter-Strike: Global Offensive under supported games.
 - Updated jQuery to version v1.8.2, jQuery UI to version v1.8.23 and Validation to version v1.10.0.
 - Significant speed increase from Master 1.0.14.
 
