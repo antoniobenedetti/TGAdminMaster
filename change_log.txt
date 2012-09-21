@@ -1,4 +1,7 @@
 ﻿===== TGAdmin-1.0.15Master  =====
+21.09.2012
+- Admin side separation of game/voice server tabs.
+
 20.09.2012
 - Rebranding the control panel under the name "TGAdmin Project".
 - Updated Smarty to version Smarty 3.1.11 stable (PHP 5.2+).
