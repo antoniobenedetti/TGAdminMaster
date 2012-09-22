@@ -1,4 +1,7 @@
 ﻿===== TGAdmin-1.0.15Master  =====
+22.09.2012
+- Optimized CSS using cleancss.com
+
 21.09.2012
 - Admin side separation of game/voice server tabs.
 - Added Counter-Strike: Global Offensive under supported games.
