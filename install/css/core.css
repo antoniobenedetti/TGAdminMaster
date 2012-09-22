@@ -49,7 +49,7 @@ padding:2px;
 
 .textbox_important {
 height:28px;
-background-color:#fffece;
+background-color:#FFF;
 color:#000;
 font-family:Arial;
 font-size:10pt;
@@ -255,7 +255,7 @@ color:#666;
 }
 
 .textbox_normal:focus,.textbox_important:focus {
-border:2px solid #689aff;
+border:1px solid #689aff;
 background-color:#fffece;
 }
 
