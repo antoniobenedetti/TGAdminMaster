@@ -1,6 +1,6 @@
 # TGAdmin free and open source game server control panel. TGAdmin is a fork of GamePanelX v2.
 
-### TGAdmin is a fork of GamePanelX Pro v2 that was developed by Ryan Gehrig in 2007 from scratch. The following TGAdmin releases are considered maintanance versions of GamePanelX without any dramatical modifications of the source. The main reason of this fork is because the version 3 of the panel was declared paid version as Premium for service providers.
+### TGAdmin is a fork of GamePanelX Pro v2 that was developed by Ryan Gehrig in 2007 from scratch. The following TGAdmin releases are considered maintenance versions of GamePanelX without any dramatical modifications of the source. The main reason of this fork is because the version 3 of the panel was declared paid version as Premium for service providers.
 
 ------------------------------------------------------------------------
 INSTALLING
@@ -35,5 +35,5 @@ SUPPORT
 
 To obtain help and support, try the following:
 
-- Purchase a Support Package from / (fastest way to receive support)
-- Post on /
+- Submit an new issue on the GitHub page.
+- Visit our website: www.tgadmin.com
