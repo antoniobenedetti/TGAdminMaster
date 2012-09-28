@@ -1,6 +1,7 @@
 ﻿===== TGAdmin-1.0.15Master  =====
 28.09.2012
 - Updated Smarty to version Smarty 3.1.12 stable.
+- Applied TeamSpeak 3 Query fix (by achton).
 
 22.09.2012
 - Optimized CSS using cleancss.com
