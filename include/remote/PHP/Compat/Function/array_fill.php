@@ -1,17 +1,14 @@
 <?php
-// $Id: array_fill.php,v 1.1 2007/07/02 04:19:55 terrafrost Exp $
-
-
 /**
  * Replace array_fill()
  *
  * @category    PHP
  * @package     PHP_Compat
- * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @license     LGPL - http://www.gnu.org/licenses/lgpl.html
  * @copyright   2004-2007 Aidan Lister <aidan@php.net>, Arpad Ray <arpad@php.net>
  * @link        http://php.net/function.array_fill
  * @author      Jim Wigginton <terrafrost@php.net>
- * @version     $Revision: 1.1 $
+ * @version     $Revision: 269597 $
  * @since       PHP 4.2.0
  */
 function php_compat_array_fill($start_index, $num, $value)
@@ -24,7 +21,14 @@ function php_compat_array_fill($start_index, $num, $value)
 
     $temp = array();
 
-    $end_index = $start_index + $num;
+    if ($start_index < 0) {
+        $temp[$start_index] = $value;
+        $start_index = 0;
+        $end_index = $num - 1;
+    } else {
+        $end_index = $start_index + $num;
+    }
+
     for ($i = (int) $start_index; $i < $end_index; $i++) {
         $temp[$i] = $value;
     }
@@ -39,3 +43,4 @@ if (!function_exists('array_fill')) {
         return php_compat_array_fill($start_index, $num, $value);
     }
 }
+
