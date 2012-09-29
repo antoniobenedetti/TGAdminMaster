@@ -1,4 +1,7 @@
 ﻿===== TGAdmin-1.0.15Master  =====
+29.09.2012
+Added Breach, Brink, Crysis 2 and CS:CZ under supported games.
+
 28.09.2012
 - Updated Smarty to version Smarty 3.1.12 stable.
 - Applied TeamSpeak 3 Query fix (by achton).
