@@ -2,13 +2,14 @@
 
 ### TGAdmin is a fork of GamePanelX Pro v2 that was developed by Ryan Gehrig in 2007 from scratch. The following TGAdmin releases are considered maintenance versions of GamePanelX without any dramatical modifications of the source.
  
+ 
 ------------------------------------------------------------------------
 REQUIREMENTS
 ------------------------------------------------------------------------
-Apache 2.2 or greater
-PHP 5.2 or greater
-MySQL 5.0 or greater
-SSH2 extension
+- Apache 2.2 or greater
+- PHP 5.2 or greater
+- MySQL 5.0 or greater
+- SSH2 extension
 
 
 ------------------------------------------------------------------------
