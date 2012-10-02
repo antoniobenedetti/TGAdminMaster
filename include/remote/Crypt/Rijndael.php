@@ -550,7 +550,7 @@ class Crypt_Rijndael {
      */
     function setIV($iv)
     {
-        $this->encryptIV = $this->decryptIV = $this->iv = str_pad(substr($iv, 0, $this->block_size), $this->block_size, chr(0));
+        $this->encryptIV = $this->decryptIV = $this->iv = str_pad(substr($iv, 0, $this->block_size), $this->block_size, chr(0));;
     }
 
     /**
@@ -575,60 +575,6 @@ class Crypt_Rijndael {
 
         $this->explicit_key_length = true;
         $this->changed = true;
-    }
-
-    /**
-     * Sets the password.
-     *
-     * Depending on what $method is set to, setPassword()'s (optional) parameters are as follows:
-     *     {@link http://en.wikipedia.org/wiki/PBKDF2 pbkdf2}:
-     *         $hash, $salt, $count
-     *     Set $dkLen by calling setKeyLength()
-     *
-     * @param String $password
-     * @param optional String $method
-     * @access public
-     */
-    function setPassword($password, $method = 'pbkdf2')
-    {
-        $key = '';
-
-        switch ($method) {
-            default: // 'pbkdf2'
-                list(, , $hash, $salt, $count) = func_get_args();
-                if (!isset($hash)) {
-                    $hash = 'sha1';
-                }
-                // WPA and WPA use the SSID as the salt
-                if (!isset($salt)) {
-                    $salt = 'phpseclib/salt';
-                }
-                // RFC2898#section-4.2 uses 1,000 iterations by default
-                // WPA and WPA2 use 4,096.
-                if (!isset($count)) {
-                    $count = 1000;
-                }
-
-                if (!class_exists('Crypt_Hash')) {
-                    require_once('Crypt/Hash.php');
-                }
-
-                $i = 1;
-                while (strlen($key) < $this->key_size) { // $dkLen == $this->key_size
-                    //$dk.= $this->_pbkdf($password, $salt, $count, $i++);
-                    $hmac = new Crypt_Hash();
-                    $hmac->setHash($hash);
-                    $hmac->setKey($password);
-                    $f = $u = $hmac->hash($salt . pack('N', $i++));
-                    for ($j = 2; $j <= $count; $j++) {
-                        $u = $hmac->hash($u);
-                        $f^= $u;
-                    }
-                    $key.= $f;
-                }
-        }
-
-        $this->setKey(substr($key, 0, $this->key_size));
     }
 
     /**
@@ -741,11 +687,11 @@ class Crypt_Rijndael {
                 break;
             case CRYPT_RIJNDAEL_MODE_CTR:
                 $xor = $this->encryptIV;
-                if (!empty($buffer['encrypted'])) {
+                if (!empty($buffer)) {
                     for ($i = 0; $i < strlen($plaintext); $i+=$block_size) {
                         $block = substr($plaintext, $i, $block_size);
-                        $buffer['encrypted'].= $this->_encryptBlock($this->_generate_xor($block_size, $xor));
-                        $key = $this->_string_shift($buffer['encrypted'], $block_size);
+                        $buffer.= $this->_encryptBlock($this->_generate_xor($block_size, $xor));
+                        $key = $this->_string_shift($buffer, $block_size);
                         $ciphertext.= $block ^ $key;
                     }
                 } else {
@@ -758,7 +704,7 @@ class Crypt_Rijndael {
                 if ($this->continuousBuffer) {
                     $this->encryptIV = $xor;
                     if ($start = strlen($plaintext) % $block_size) {
-                        $buffer['encrypted'] = substr($key, $start) . $buffer['encrypted'];
+                        $buffer = substr($key, $start) . $buffer;
                     }
                 }
                 break;
@@ -862,11 +808,11 @@ class Crypt_Rijndael {
                 break;
             case CRYPT_RIJNDAEL_MODE_CTR:
                 $xor = $this->decryptIV;
-                if (!empty($buffer['ciphertext'])) {
+                if (strlen($buffer)) {
                     for ($i = 0; $i < strlen($ciphertext); $i+=$block_size) {
                         $block = substr($ciphertext, $i, $block_size);
-                        $buffer['ciphertext'].= $this->_encryptBlock($this->_generate_xor($block_size, $xor));
-                        $key = $this->_string_shift($buffer['ciphertext'], $block_size);
+                        $buffer.= $this->_encryptBlock($this->_generate_xor($block_size, $xor));
+                        $key = $this->_string_shift($buffer, $block_size);
                         $plaintext.= $block ^ $key;
                     }
                 } else {
@@ -879,7 +825,7 @@ class Crypt_Rijndael {
                 if ($this->continuousBuffer) {
                     $this->decryptIV = $xor;
                     if ($start = strlen($ciphertext) % $block_size) {
-                        $buffer['ciphertext'] = substr($key, $start) . $buffer['encrypted'];
+                        $buffer = substr($key, $start) . $buffer;
                     }
                 }
                 break;
